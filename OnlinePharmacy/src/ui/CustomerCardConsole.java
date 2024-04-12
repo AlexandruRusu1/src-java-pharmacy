@@ -1,6 +1,6 @@
 package ui;
 
-import domain.CustomerCard;
+import Domain.CustomerCard;
 import operations.CustomerCardService;
 
 import java.sql.Date;
