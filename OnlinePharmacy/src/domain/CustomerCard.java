@@ -1,13 +1,11 @@
-package domain;
+package Domain;
 
 import java.sql.Date;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 
 
-public class CustomerCard extends BaseEntity{
+public class CustomerCard extends BaseEntity {
     private String firstName;
     private String LastName;
     private String CNP;              //cnp  must be unique!!!

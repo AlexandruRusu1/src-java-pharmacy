@@ -1,11 +1,9 @@
 package operations;
 
-import domain.CustomerCard;
+import Domain.CustomerCard;
 import repository.SystemRepository;
 
 import java.sql.Date;
-import java.text.DateFormat;
-import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerCardService {

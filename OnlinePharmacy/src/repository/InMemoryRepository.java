@@ -1,6 +1,6 @@
 package repository;
 
-import domain.BaseEntity;
+import Domain.BaseEntity;
 
 import java.util.ArrayList;
 import java.util.List;
