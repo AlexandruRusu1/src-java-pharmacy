@@ -1,8 +1,6 @@
-package operations;
-
+package service;
 import domain.CustomerCard;
 import repository.SystemRepository;
-
 import java.sql.Date;
 import java.util.List;
 

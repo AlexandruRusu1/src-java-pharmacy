@@ -1,4 +1,4 @@
-package operations;
+package service;
 
 import domain.Drug;
 import repository.SystemRepository;
@@ -39,7 +39,7 @@ public class DrugService {
         getAllDrugs().remove(id);
     }
 
-    public void updateDrug (int id, int newPrice) {
+    public void updateDrug (int id, double newPrice) {
 
         for (Drug drug : getAllDrugs())
             if (drug.getId() == id)
