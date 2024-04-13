@@ -1,8 +1,14 @@
+import domain.CustomerCard;
+import operations.CustomerCardService;
+import repository.InMemoryRepository;
+import repository.SystemRepository;
+import ui.CustomerCardConsole;
 
 public class Main {
     public static void main(String[] args) {
-        Date date = new Date();
-        String str = String.format("Curent Date : %tc", date);
-
+        SystemRepository<CustomerCard> customerCardSystemRepository = new InMemoryRepository<>();
+        CustomerCardService customerCardService = new CustomerCardService(customerCardSystemRepository);
+        CustomerCardConsole customerCardConsole = new CustomerCardConsole(customerCardService);
+        customerCardConsole.runMenu();
     }
 }

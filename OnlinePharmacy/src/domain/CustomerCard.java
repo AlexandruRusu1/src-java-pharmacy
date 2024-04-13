@@ -1,11 +1,7 @@
 package domain;
 
-import java.sql.Date;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
 
+import java.sql.Date;
 
 public class CustomerCard extends BaseEntity{
     private String firstName;
@@ -52,6 +48,7 @@ public class CustomerCard extends BaseEntity{
     }
 
     public void setBornDate(Date bornDate) {
+
         this.bornDate = bornDate;
     }
 
@@ -61,14 +58,6 @@ public class CustomerCard extends BaseEntity{
 
     public void setDateOfRegistration(Date dateOfRegistration) {
         this.dateOfRegistration = dateOfRegistration;
-    }
-
-    public void date(){
-        SimpleDateFormat DateFor = new SimpleDateFormat("dd/MM/yyyy");
-        try{
-            Date date = (Date) DateFor.parse("08/07/2019");
-            System.out.println("Date : "+date);
-        }catch (ParseException e) {e.printStackTrace();}
     }
 
     @Override

@@ -1,6 +1,7 @@
 package repository;
 
 import domain.BaseEntity;
+import domain.CustomerCard;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,4 +40,7 @@ public class InMemoryRepository <T extends BaseEntity> implements SystemReposito
         }
         return null;
     }
+
+
+
 }

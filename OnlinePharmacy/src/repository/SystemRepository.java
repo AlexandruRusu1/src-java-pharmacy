@@ -10,4 +10,5 @@ public interface SystemRepository <Entity> {
     void update(int id, Entity entity);
 
     void deleteById(int id);
+
 }

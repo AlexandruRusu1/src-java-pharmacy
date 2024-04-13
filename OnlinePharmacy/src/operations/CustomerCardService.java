@@ -4,8 +4,6 @@ import domain.CustomerCard;
 import repository.SystemRepository;
 
 import java.sql.Date;
-import java.text.DateFormat;
-import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerCardService {
@@ -15,12 +13,18 @@ public class CustomerCardService {
         this.customerCardSystemRepository = customerCardSystemRepository;
     }
 
+
     public void addCustomerCards(int id, String firstName, String lastName, String CNP, Date bornDate, Date dateOfRegistration) {
         CustomerCard customerCard = new CustomerCard(id, firstName, lastName, CNP, bornDate, dateOfRegistration);
         customerCardSystemRepository.save(customerCard);
+    }
+    public void deleteById(int id){
+
     }
 
     public List<CustomerCard> getAllCustomerCards() {
         return customerCardSystemRepository.findAll();
     }
+
+
 }
