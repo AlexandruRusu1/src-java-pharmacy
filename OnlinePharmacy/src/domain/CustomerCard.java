@@ -3,16 +3,17 @@ package domain;
 import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 
 
 public class CustomerCard extends BaseEntity {
     private String firstName;
     private String LastName;
     private String CNP;              //cnp  must be unique!!!
-    private Date bornDate;
-    private Date dateOfRegistration;
+    private LocalDate bornDate;
+    private LocalDate dateOfRegistration;
 
-    public CustomerCard(int id, String firstName, String lastName, String CNP, Date bornDate, Date dateOfRegistration) {
+    public CustomerCard(int id, String firstName, String lastName, String CNP, LocalDate bornDate, LocalDate dateOfRegistration) {
         super(id);
         this.firstName = firstName;
         LastName = lastName;
@@ -45,29 +46,22 @@ public class CustomerCard extends BaseEntity {
         this.CNP = CNP;
     }
 
-    public Date getBornDate() {
+    public LocalDate getBornDate() {
         return  bornDate;
     }
 
-    public void setBornDate(Date bornDate) {
+    public void setBornDate(LocalDate bornDate) {
         this.bornDate = bornDate;
     }
 
-    public Date getDateOfRegistration() {
+    public LocalDate getDateOfRegistration() {
         return dateOfRegistration;
     }
 
-    public void setDateOfRegistration(Date dateOfRegistration) {
+    public void setDateOfRegistration(LocalDate dateOfRegistration) {
         this.dateOfRegistration = dateOfRegistration;
     }
 
-    public void date(){
-        SimpleDateFormat DateFor = new SimpleDateFormat("dd/MM/yyyy");
-        try{
-            Date date = (Date) DateFor.parse("08/07/2019");
-            System.out.println("Date : "+date);
-        }catch (ParseException e) {e.printStackTrace();}
-    }
 
     @Override
     public String toString() {
