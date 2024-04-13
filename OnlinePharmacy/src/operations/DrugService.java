@@ -1,6 +1,6 @@
 package operations;
 
-import Domain.Drug;
+import domain.Drug;
 import repository.SystemRepository;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 package operations;
 
-import Domain.CustomerCard;
+import domain.CustomerCard;
 import repository.SystemRepository;
 
 import java.sql.Date;
